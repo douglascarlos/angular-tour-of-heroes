@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { Hero } from '../hero';
+
 @Component({
   selector: 'app-heroes',
   templateUrl: './heroes.component.html',
@@ -7,11 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeroesComponent implements OnInit {
 
-	public hero: string = 'Windstorm';
+	public hero: Hero;
 
   constructor() { }
 
   ngOnInit() {
+  	this.hero = new Hero(1, 'Windstorm');
   }
 
 }
