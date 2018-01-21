@@ -5,6 +5,8 @@ import { AppComponent } from './app.component';
 import { HeroesComponent } from './heroes';
 import { HeroDetailComponent } from './hero-detail';
 import { HeroService } from './hero.service';
+import { MessagesComponent } from './messages';
+import { MessageService } from './message.service';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
@@ -12,13 +14,15 @@ describe('AppComponent', () => {
       declarations: [
         AppComponent, 
         HeroesComponent,
-        HeroDetailComponent
+        HeroDetailComponent,
+        MessagesComponent
       ],
       imports: [
         FormsModule
       ],
       providers: [
-        HeroService
+        HeroService, 
+        MessageService
       ]
     }).compileComponents();
   }));

@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { HeroesComponent } from '../heroes';
 import { HeroDetailComponent } from '../hero-detail';
 import { HeroService } from '../hero.service';
+import { MessageService } from '../message.service';
 
 describe('HeroesComponent', () => {
   let component: HeroesComponent;
@@ -19,7 +20,8 @@ describe('HeroesComponent', () => {
         FormsModule
       ],
       providers: [
-        HeroService
+        HeroService,
+        MessageService
       ]
     })
     .compileComponents();
