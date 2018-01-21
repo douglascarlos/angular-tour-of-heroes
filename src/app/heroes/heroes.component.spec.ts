@@ -3,6 +3,7 @@ import { FormsModule } from '@angular/forms';
 
 import { HeroesComponent } from '../heroes';
 import { HeroDetailComponent } from '../hero-detail';
+import { HeroService } from '../hero.service';
 
 describe('HeroesComponent', () => {
   let component: HeroesComponent;
@@ -16,6 +17,9 @@ describe('HeroesComponent', () => {
       ],
       imports: [
         FormsModule
+      ],
+      providers: [
+        HeroService
       ]
     })
     .compileComponents();

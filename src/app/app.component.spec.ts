@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { HeroesComponent } from './heroes';
 import { HeroDetailComponent } from './hero-detail';
+import { HeroService } from './hero.service';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
@@ -15,6 +16,9 @@ describe('AppComponent', () => {
       ],
       imports: [
         FormsModule
+      ],
+      providers: [
+        HeroService
       ]
     }).compileComponents();
   }));
