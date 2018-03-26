@@ -7,6 +7,8 @@ import { HeroDetailComponent } from './hero-detail';
 import { HeroService } from './hero.service';
 import { MessagesComponent } from './messages';
 import { MessageService } from './message.service';
+import { AppRoutingModule } from './app-routing.module';
+import { DashboardComponent } from './dashboard';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
@@ -15,10 +17,12 @@ describe('AppComponent', () => {
         AppComponent, 
         HeroesComponent,
         HeroDetailComponent,
-        MessagesComponent
+        MessagesComponent,
+        DashboardComponent
       ],
       imports: [
-        FormsModule
+        FormsModule,
+        AppRoutingModule
       ],
       providers: [
         HeroService, 
